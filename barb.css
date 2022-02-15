@@ -1,0 +1,524 @@
+/* font-family: 'Advent Pro', sans-serif;
+font-family: 'BenchNine', sans-serif;
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Concert One', cursive;
+font-family: 'DM Serif Display', serif;
+font-family: 'Economica', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Suranna', serif;
+font-family: 'Xanh Mono', monospace;
+font-family: 'Yeseva One', cursive;} */
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background:rgb(219, 218, 218) ;
+}
+@media (max-width:35em){
+#navbar{
+    border-bottom: rgb(22, 21, 21) solid;
+    width: 100vw;
+    color:rgb(16, 16, 19) ;
+    background: rgb(219, 218, 218);
+    display: grid;
+    grid-template-columns:1fr .4fr .1fr;
+    justify-items: start;
+    align-items: center;
+    height: 10vh;
+}
+.icon{
+    transform: rotate(270deg);
+    font-size: 2.5em;
+    padding-top: -1em;
+    padding-right: .2em;
+    position: relative;
+    top: -.7vh;
+}
+#navbar .cartbar i{
+    padding: .5em;
+}
+#navbar .cartbar{
+    display: flex;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding:vh ;
+    height: 5vh;
+    margin: 3vh;
+    
+}
+.logo h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5em;
+}
+.logo h5{
+    font-size: 1em;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: lighter;
+}
+.ubars{
+    width: 2em;
+    margin-left: 1em;
+    color: white;
+    background:rgb(66, 66, 105);
+    border-radius: .3em;
+
+}
+.ubars:hover{
+    cursor: pointer;
+    background:rgb(16, 16, 19);
+    transition: ease-in-out .3s;
+    border-radius: .2em;
+}
+.cart{
+    background:rgb(66, 66, 105);
+    color: white;
+    border-radius: .3em;
+}
+.cart:hover{
+    cursor: pointer;
+    color: white;
+    border-radius: .5em;
+    padding: .01em;
+    background:rgb(16, 16, 19);
+    transition: ease-in-out .5s;
+}
+#checked{
+    display: none;
+}
+.ubars:checked ~ ul{
+    position: relative;
+    right: 0;
+}
+ul{
+    position: fixed;
+    top: 5vh;
+    right: -80vw;
+    width: 20vh;
+    background:rgb(16, 16, 19) ;
+    color: white;
+    padding: 5vw;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ul :first-child{
+    line-height: 3vh;
+    text-decoration: underline;
+}
+ul :first-child:hover{
+    color: white;
+    background:rgb(16, 16, 19) ;
+    cursor: pointer;
+}
+
+#mainbody{
+    height: 10vh;
+    background: rgb(219, 218, 218);
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+#background img{
+    padding-top: 5vh;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    top: -5vh;
+    left: 10vw;
+}
+#container1{
+    background: rgb(219, 218, 218);
+    width:80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10vw;
+}
+#container1 button{
+    position: absolute;
+    top: 70vh;
+    left: 35vw;
+    font-size: .5em;
+    width: 28vw;
+    height: 4vh;
+    padding:.3vh 2vw;
+    color: white;
+    background: rgb(16, 16, 19);
+    box-shadow: 4px 6px 10px rgb(138, 135, 135);
+}
+#container1 button:hover{
+    cursor: pointer;
+    background:rgb(66, 66, 105) ;
+    transition: ease-in-out .4s;
+    font-size: .6em;
+}
+.nyc h1{
+    text-align: center;
+    color:rgb(16, 16, 19) ;
+    font-size: 1.7em;
+    margin-bottom: 2vh;
+}
+.care button{
+    visibility: hidden;
+    font-size: .6em;
+    width: 30vw;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    justify-content: space-between;
+    align-items: center;
+    padding:.3vh 2vw;
+    color: white;
+    background: rgb(16, 16, 19);
+    position: absolute;
+    left: 5vw;
+    top: 58vh;
+}
+.care button p{
+    text-align: left;
+}
+.care button span{
+    text-align: right;
+}
+footer{
+    position: relative;
+    top: 60vh;
+    padding: 3vh;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    background: rgb(16, 16, 19);
+}
+footer div{
+    text-align: center;
+    background: rgb(219, 218, 218);
+    height: 20vh;
+    width: 40vw;
+    border-radius: 20%;
+    padding: 5vw;
+    color: rgb(16, 16, 19);
+    margin-bottom:3vh;
+}
+footer div:hover{
+    box-shadow: 0em 0em 5em #ffffff;
+    cursor: pointer;
+    color: white;
+    background: #7979ac05;
+    transition: ease-in-out .3s;
+}
+footer h3:hover{
+    box-shadow: -.5em -.5em 5em #ffffff;
+    cursor: pointer;
+    color: white;
+    background: #7979ac05;
+    transition: ease-in-out .3s;
+}
+hr{
+    display: none;
+}
+}
+@media screen and (min-width:35em) {
+    #navbar{
+        margin: 0 3vh;
+        color:rgb(16, 16, 19) ;
+        background: rgb(219, 218, 218);
+        display: grid;
+        grid-template-columns: .4fr 1fr .15fr;
+        align-items: center;
+    }
+    .icon{
+        transform: rotate(270deg);
+        font-size: 6vw;
+        padding-right: .2em;
+        width: 5vw;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        
+    }
+    
+    .ubars{
+        display: none;
+    }
+    .cart:hover{
+        cursor: pointer;
+        color: white;
+        padding: .5em;
+        border-radius: 1em;
+        text-align: center;
+        background:rgb(16, 16, 19) ;
+        transition: ease-in-out .3s;
+    }
+    .logo h1{
+        font-family: 'PT Sans', sans-serif;
+        font-size: 1.9em;
+    }
+    .logo h5{
+        font-size: 1.1em;
+        font-family: 'BenchNine', sans-serif;
+        font-weight: lighter;
+    }
+    ul{
+        height: 5vh;
+        margin: 5vw;
+        font-family: 'PT Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul :first-child{
+        text-decoration: underline;
+    }
+    ul :first-child:hover{
+        margin: .5em;
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        color: white;
+        background:rgb(16, 16, 19) ;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+    }
+    ul :last-child:hover{
+        margin: .5em;
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        color: white;
+        background:rgb(16, 16, 19) ;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+    }
+    ul :nth-child(2):hover{
+        margin: .5em;
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        color: white;
+        background:rgb(16, 16, 19) ;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+    }
+    ul :nth-child(3):hover{
+        margin: .5em;
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        color: white;
+        background:rgb(16, 16, 19) ;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+    }
+    ul :nth-child(4):hover{
+        margin: .5em;
+        text-align: center;
+        width: auto;
+        padding: .5em;
+        color: white;
+        background:rgb(16, 16, 19) ;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+    }
+    #mainbody{
+        height: 60vh;
+        background: rgb(219, 218, 218);
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    #background{
+        position: absolute;
+        left: 25vw;
+        top: 10vh;
+    }
+    #container1{
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 5vw;
+    }
+    #container1 button{
+        font-size: .7em;
+        width: 28vw;
+        height: 5vh;
+        padding:.3vh 2vw;
+        color: white;
+        background: rgb(16, 16, 19);
+        box-shadow: 4px 6px 10px rgb(138, 135, 135);
+    }
+    #container1 button:hover{
+        cursor: pointer;
+        background:rgb(66, 66, 105) ;
+        transition: ease-in-out .2s;
+        font-size: .8em;
+        box-shadow: 0 0 5em rgb(131, 127, 129);
+    }
+    .nyc h1{
+        color:rgb(16, 16, 19) ;
+        font-size: 1.7em;
+        margin-bottom: 2vh;
+    }
+    .care button{
+        width: 20vw;
+        height: 7vh;
+        display: grid;
+        grid-template-columns: 1fr .3fr;
+        justify-content: space-between;
+        align-items: center;
+        padding:.3vh 2vw;
+        color: white;
+        background: rgb(16, 16, 19);
+        position: absolute;
+        left: 75vw;
+        top: 30vh;
+    }
+    .care button p{
+        text-align: left;
+    }
+    .care button span{
+        text-align: right;
+    }
+    .care button:hover{
+        cursor: pointer;
+        background:rgb(66, 66, 105) ;
+        transition: ease-in-out .2s;
+        font-size: .9em;
+
+    }
+    footer{
+        padding: 3vh;
+        width: 100%;
+        height: 10vh;
+        display: grid;
+        grid-template-columns: 1fr 0fr 1fr 1fr;
+        justify-content: space-between;
+        justify-items: center;
+        color: white;
+        background: rgb(16, 16, 19);
+    }
+}
+@media screen and (min-width: 60em) {
+#navbar{
+    color:rgb(16, 16, 19) ;
+    background: rgb(219, 218, 218);
+    display: grid;
+    grid-template-columns:1fr 1fr .15fr;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    padding:5vh ;
+    height: 5vh;
+}
+.icon{
+    transform: rotate(270deg);
+    font-size: 5vw;
+    padding-right: .1em;
+    width: 5vw;
+}
+.logo h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.9em;
+}
+.logo h5{
+    font-size: 1.1em;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: lighter;
+}
+ul{
+    margin: 5vw;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.ubars{
+    display: none;
+}
+#mainbody{
+    height: 60vh;
+    background: rgb(219, 218, 218);
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+#background{
+    position: absolute;
+    left: 42vw;
+    top: 10vw;
+}
+#container1{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10vw;
+}
+#container1 button{
+    font-size: .7em;
+    width: 28vw;
+    height: 5vh;
+    padding:.3vh 2vw;
+    color: white;
+    background: rgb(16, 16, 19);
+    box-shadow: 4px 6px 10px rgb(138, 135, 135);
+}
+.nyc h1{
+    color:rgb(16, 16, 19) ;
+    font-size: 2em;
+    margin-bottom: 2vh;
+}
+.care button{
+    width: 17vw;
+    height: 7vh;
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    justify-content: space-between;
+    align-items: center;
+    padding:.3vh 2vw;
+    color: white;
+    background: rgb(16, 16, 19);
+    position: absolute;
+    left: 82vw;
+    top: 30vh;
+}
+.care button p{
+    text-align: left;
+}
+.care button span{
+    text-align: right;
+}
+footer{
+    padding: 3vh;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 0fr 1fr 1fr;
+    justify-content: space-between;
+    justify-items: center;
+    color: white;
+    background: rgb(16, 16, 19);
+}
+
+
+}
